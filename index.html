@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Media Gallery</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search media...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="gallery-container" id="gallery">
+            <!-- Media items will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <span class="close-button">&times;</span>
+        <div id="modalContent" class="modal-content-container"></div>
+        <div class="modal-caption" id="modalCaption"></div>
+        <button class="nav-button prev-button"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-button next-button"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
