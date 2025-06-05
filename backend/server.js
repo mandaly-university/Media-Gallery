@@ -6,7 +6,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const port = 1234;
+const port = process.env.PORT || 1234;
 
 // Middleware
 app.use(cors());
@@ -171,4 +171,5 @@ app.put('/api/photos/:filename', (req, res) => {
 // Start server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+    console.log('Connected to SQLite database');
 }); 
