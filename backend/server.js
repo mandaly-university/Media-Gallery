@@ -12,6 +12,7 @@ const port = process.env.PORT || 1234;
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Create uploads directory if it doesn't exist
 if (!fs.existsSync('uploads')) {
@@ -166,6 +167,11 @@ app.put('/api/photos/:filename', (req, res) => {
             res.json({ message: 'Photo updated successfully' });
         }
     );
+});
+
+// Add a route to serve the index.html file for the root path
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
 });
 
 // Start server
