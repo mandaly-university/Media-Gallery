@@ -1,0 +1,11 @@
+{
+  "name": "photo-gallery-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Photo Gallery Application",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 

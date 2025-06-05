@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Photo Gallery</h1>
+            <div class="controls">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search photos...">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="upload-container">
+                    <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                    <button id="uploadButton" class="upload-btn"><i class="fas fa-upload"></i></button>
+                </div>
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+        <div class="category-filter">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="personal">Personal</button>
+            <button class="category-btn" data-category="family">Family</button>
+            <button class="category-btn" data-category="travel">Travel</button>
+            <button class="category-btn" data-category="other">Other</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="gallery-container" id="gallery">
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-images"></i>
+                <h2>Your gallery is empty</h2>
+                <p>Upload some photos to get started!</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+        <button class="nav-button prev-button"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-button next-button"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
